@@ -42,7 +42,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Inter, sans-serif;
   /* 4 */
 }
 
@@ -468,18 +468,37 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.m-16 {
-  margin: 4rem;
+.absolute {
+  position: absolute;
 }
 
-.mx-16 {
-  margin-left: 4rem;
-  margin-right: 4rem;
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
 }
 
-.mx-12 {
-  margin-left: 3rem;
-  margin-right: 3rem;
+.top-0 {
+  top: 0px;
+}
+
+.top-\[0vh\] {
+  top: 0vh;
+}
+
+.top-\[100vh\] {
+  top: 100vh;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.m-auto {
+  margin: auto;
 }
 
 .mx-8 {
@@ -487,12 +506,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 2rem;
 }
 
-.mr-16 {
-  margin-right: 4rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-16 {
@@ -503,12 +526,49 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
+.h-\[500px\] {
+  height: 500px;
+}
+
+.h-\[20vh\] {
+  height: 20vh;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[30px\] {
+  height: 30px;
+}
+
 .w-16 {
   width: 4rem;
 }
 
-.w-full {
-  width: 100%;
+.w-\[1px\] {
+  width: 1px;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.min-w-\[100px\] {
+  min-width: 100px;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.translate-y-\[100vh\] {
+  --tw-translate-y: 100vh;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-col {
@@ -523,13 +583,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: center;
 }
 
-.rounded {
-  border-radius: 0.25rem;
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
-.border-gray-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+.overflow-visible {
+  overflow: visible;
 }
 
 .bg-slate-100 {
@@ -537,9 +596,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
-.bg-white {
+.bg-orange-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
 .bg-twitter-light {
@@ -550,8 +614,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('/assets/github-light.svg');
 }
 
-.bg-\[top_1px\] {
-  background-position: top 1px;
+.bg-gait-software-light {
+  background-image: url('/assets/gait-software-light.svg');
+}
+
+.bg-contain {
+  background-size: contain;
 }
 
 .bg-center {
@@ -562,17 +630,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-repeat: no-repeat;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .p-8 {
   padding: 2rem;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.p-20 {
+  padding: 5rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .py-4 {
@@ -580,13 +647,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1rem;
 }
 
-.align-middle {
-  vertical-align: middle;
+.pt-4 {
+  padding-top: 1rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.text-center {
+  text-align: center;
 }
 
 .text-xl {
@@ -594,18 +660,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
-.text-slate-700 {
+.text-black {
   --tw-text-opacity: 1;
-  color: rgb(51 65 85 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.underline-offset-8 {
+  text-underline-offset: 8px;
 }
 
 .opacity-80 {
   opacity: 0.8;
 }
 
-.drop-shadow-md {
-  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+.opacity-0 {
+  opacity: 0;
+}
+
+.hover\:underline:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .hover\:opacity-100:hover {
@@ -613,14 +687,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark\:bg-slate-700 {
+  .dark\:bg-black {
     --tw-bg-opacity: 1;
-    background-color: rgb(51 65 85 / var(--tw-bg-opacity));
-  }
-
-  .dark\:bg-gray-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   }
 
   .dark\:bg-twitter-dark {
@@ -631,20 +700,37 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-image: url('/assets/github-dark.svg');
   }
 
-  .dark\:text-slate-50 {
+  .dark\:bg-gait-software-dark {
+    background-image: url('/assets/gait-software-dark.svg');
+  }
+
+  .dark\:text-gait-blue {
     --tw-text-opacity: 1;
-    color: rgb(248 250 252 / var(--tw-text-opacity));
+    color: rgb(147 197 251 / var(--tw-text-opacity));
   }
 }
 
 @media (min-width: 640px) {
+  .sm\:visible {
+    visibility: visible;
+  }
+
   .sm\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
   }
 
-  .sm\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none;
   }
 }

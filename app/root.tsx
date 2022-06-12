@@ -9,13 +9,15 @@ import {
 } from "remix";
 import type { MetaFunction } from "remix";
 import styles from "./tailwind.css";
+import Navbar from "./components/Navbar";
+import ShrinkableLogo from "./components/ShrinkableLogo";
 
 export function links() {
   return [{ rel: "stylesheet", href: styles }];
 }
 
 export const meta: MetaFunction = () => {
-  return { title: "alextraher.dev" };
+  return { title: "gait.dev" };
 };
 
 export default function App() {
@@ -27,10 +29,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-50">
-        <nav className="bg-white border-gray-200 px-2 sm:px-4 py-4 dark:bg-gray-900 drop-shadow-md w-full">
-          <Link to='/'><h1>AlexTraher.dev</h1></Link>
-        </nav>
+      <body className="bg-slate-100 dark:bg-black text-black dark:text-gait-blue">
+        <Navbar />
+        <ShrinkableLogo />
         <section>
           <ul className="p-8 flex justify-center">
             <li className="mx-8 sm:mx-12"><a href="https://twitter.com/alextraher"><div className="bg-twitter-light bg-no-repeat dark:bg-twitter-dark w-16 h-16 opacity-80 hover:opacity-100 bg-center"></div></a></li>
@@ -39,6 +40,13 @@ export default function App() {
         </section>
         <section className="flex justify-center flex-col items-center h-full">
           <h2 className="text-xl">Coming soon...</h2>
+          
+        </section>
+        <section className="h-[500px] bg-orange-600">
+          
+        </section>
+        <section className="h-[500px] bg-red-600">
+          
         </section>
         
         <Outlet />
