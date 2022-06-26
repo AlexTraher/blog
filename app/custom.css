@@ -1,0 +1,3 @@
+#menuToggle:checked + .collapsible-menu {
+  display: flex;
+}

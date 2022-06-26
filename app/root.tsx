@@ -9,11 +9,15 @@ import {
 } from "remix";
 import type { MetaFunction } from "remix";
 import styles from "./tailwind.css";
+import customStyles from "./custom.css";
 import Navbar from "./components/Navbar";
 import ShrinkableLogo from "./components/ShrinkableLogo";
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }];
+  return [
+    { rel: "stylesheet", href: styles },
+    { rel: "stylesheet", href: customStyles }
+  ];
 }
 
 export const meta: MetaFunction = () => {

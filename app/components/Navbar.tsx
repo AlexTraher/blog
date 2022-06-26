@@ -9,15 +9,18 @@ const Navbar: VFC<NavbarProps> = () => {
   const { pathname } = useLocation();
 
   return (
-    <nav className="sticky top-0 py-4 dark:bg-black bg-slate-100 z-10">
-      <ul className="flex mt-4 justify-evenly">
+    <nav className="sticky top-0 py-4 dark:bg-black bg-slate-100 z-10 flex flex-wrap">
+      <div className="bg-gait-i-light dark:bg-gait-i-dark h-[45px] w-[45px] bg-contain bg-no-repeat [background-position:20px] flex-1 sm:hidden"></div>
+      <label htmlFor="menuToggle" className="block cursor-pointer self-center sm:hidden">+</label>
+      <input id="menuToggle" type="checkbox" className="block opacity-0 sm:hidden" />
+      <ul className="mt-4 justify-evenly collapsible-menu flex-col sm:flex-row hidden sm:flex flex-shrink-0 flex-grow-0 flex-[100%]">
         <li className="flex-shrink-0 min-w-[100px] text-center">
         <Link to="/" className="underline-offset-8 hover:underline">Home</Link>
         </li>
         <li className="flex-shrink-0 min-w-[100px] text-center">
         <Link to="/about" className="underline-offset-8 hover:underline">About</Link>
         </li>
-        <li className="flex-shrink-0 min-w-[100px] text-center">
+        <li className="flex-shrink-0 min-w-[100px] text-center hidden sm:block">
           <Link to="/" className="underline-offset-8 hover:underline">
             <div className={`
               w-[151px]

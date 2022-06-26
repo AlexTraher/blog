@@ -510,12 +510,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: -1rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
 
 .hidden {
   display: none;
+}
+
+.h-\[45px\] {
+  height: 45px;
+}
+
+.h-\[20vh\] {
+  height: 20vh;
 }
 
 .h-16 {
@@ -530,24 +542,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 500px;
 }
 
-.h-\[30px\] {
-  height: 30px;
-}
-
-.h-\[20vh\] {
-  height: 20vh;
-}
-
-.h-\[45px\] {
-  height: 45px;
-}
-
-.w-16 {
-  width: 4rem;
-}
-
-.w-\[100px\] {
-  width: 100px;
+.w-\[151px\] {
+  width: 151px;
 }
 
 .w-\[200px\] {
@@ -558,24 +554,44 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1px;
 }
 
-.w-\[150px\] {
-  width: 150px;
+.w-16 {
+  width: 4rem;
 }
 
-.w-\[151px\] {
-  width: 151px;
+.w-\[45px\] {
+  width: 45px;
 }
 
 .min-w-\[100px\] {
   min-width: 100px;
 }
 
+.flex-\[100\%\] {
+  flex: 100%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .flex-shrink-0 {
   flex-shrink: 0;
 }
 
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -588,6 +604,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-evenly {
   justify-content: space-evenly;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .overflow-visible {
@@ -609,20 +629,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
-.bg-twitter-light {
-  background-image: url('/assets/twitter-light.svg');
-}
-
-.bg-github-light {
-  background-image: url('/assets/github-light.svg');
+.bg-gait-i-light {
+  background-image: url('/assets/gait-i-light.svg');
 }
 
 .bg-gait-software-light {
   background-image: url('/assets/gait-software-light.svg');
 }
 
-.bg-gait-i-light {
-  background-image: url('/assets/gait-i-light.svg');
+.bg-twitter-light {
+  background-image: url('/assets/twitter-light.svg');
+}
+
+.bg-github-light {
+  background-image: url('/assets/github-light.svg');
 }
 
 .bg-contain {
@@ -633,16 +653,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-position: center;
 }
 
+.bg-left {
+  background-position: left;
+}
+
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
 .p-4 {
   padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .py-4 {
@@ -668,12 +692,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-underline-offset: 8px;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .opacity-80 {
   opacity: 0.8;
 }
 
-.opacity-0 {
-  opacity: 0;
+.\[background-position\:20px\] {
+  background-position: 20px;
 }
 
 .hover\:underline:hover {
@@ -704,20 +732,20 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   }
 
-  .dark\:bg-twitter-dark {
-    background-image: url('/assets/twitter-dark.svg');
-  }
-
-  .dark\:bg-github-dark {
-    background-image: url('/assets/github-dark.svg');
+  .dark\:bg-gait-i-dark {
+    background-image: url('/assets/gait-i-dark.svg');
   }
 
   .dark\:bg-gait-software-dark {
     background-image: url('/assets/gait-software-dark.svg');
   }
 
-  .dark\:bg-gait-i-dark {
-    background-image: url('/assets/gait-i-dark.svg');
+  .dark\:bg-twitter-dark {
+    background-image: url('/assets/twitter-dark.svg');
+  }
+
+  .dark\:bg-github-dark {
+    background-image: url('/assets/github-dark.svg');
   }
 
   .dark\:text-gait-blue {
@@ -738,6 +766,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:flex-col {
+    flex-direction: column;
   }
 }
 
