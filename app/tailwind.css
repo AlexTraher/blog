@@ -481,12 +481,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0px;
 }
 
-.top-\[0vh\] {
-  top: 0vh;
-}
-
-.top-\[100vh\] {
-  top: 100vh;
+.top-\[-10px\] {
+  top: -10px;
 }
 
 .z-10 {
@@ -510,6 +506,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.mt-\[-1rem\] {
+  margin-top: -1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -530,32 +530,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 500px;
 }
 
+.h-\[30px\] {
+  height: 30px;
+}
+
 .h-\[20vh\] {
   height: 20vh;
 }
 
-.h-\[100px\] {
-  height: 100px;
-}
-
-.h-\[30px\] {
-  height: 30px;
+.h-\[45px\] {
+  height: 45px;
 }
 
 .w-16 {
   width: 4rem;
 }
 
-.w-\[1px\] {
-  width: 1px;
+.w-\[100px\] {
+  width: 100px;
 }
 
 .w-\[200px\] {
   width: 200px;
 }
 
-.w-\[100px\] {
-  width: 100px;
+.w-\[1px\] {
+  width: 1px;
+}
+
+.w-\[150px\] {
+  width: 150px;
+}
+
+.w-\[151px\] {
+  width: 151px;
 }
 
 .min-w-\[100px\] {
@@ -564,11 +572,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-shrink-0 {
   flex-shrink: 0;
-}
-
-.translate-y-\[100vh\] {
-  --tw-translate-y: 100vh;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-col {
@@ -618,6 +621,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('/assets/gait-software-light.svg');
 }
 
+.bg-gait-i-light {
+  background-image: url('/assets/gait-i-light.svg');
+}
+
 .bg-contain {
   background-size: contain;
 }
@@ -634,10 +641,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 2rem;
 }
 
-.p-20 {
-  padding: 5rem;
-}
-
 .p-4 {
   padding: 1rem;
 }
@@ -645,10 +648,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
 }
 
 .text-center {
@@ -686,6 +685,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 1;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .motion-safe\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-reduce\:bg-gait-software-light {
+    background-image: url('/assets/gait-software-light.svg');
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .dark\:bg-black {
     --tw-bg-opacity: 1;
@@ -704,33 +716,47 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-image: url('/assets/gait-software-dark.svg');
   }
 
+  .dark\:bg-gait-i-dark {
+    background-image: url('/assets/gait-i-dark.svg');
+  }
+
   .dark\:text-gait-blue {
     --tw-text-opacity: 1;
     color: rgb(147 197 251 / var(--tw-text-opacity));
   }
 }
 
-@media (min-width: 640px) {
-  .sm\:visible {
-    visibility: visible;
+@media (prefers-reduced-motion: reduce) {
+  @media (prefers-color-scheme: dark) {
+    .motion-reduce\:dark\:bg-gait-software-dark {
+      background-image: url('/assets/gait-software-dark.svg');
+    }
   }
+}
 
+@media (min-width: 640px) {
   .sm\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
   }
-
-  .sm\:flex {
-    display: flex;
-  }
-
-  .sm\:hidden {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) {
-  .md\:hidden {
-    display: none;
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:bg-none {
+    background-image: none;
+  }
+
+  .md\:bg-gait-software-light {
+    background-image: url('/assets/gait-software-light.svg');
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .md\:dark\:bg-gait-software-dark {
+      background-image: url('/assets/gait-software-dark.svg');
+    }
   }
 }
