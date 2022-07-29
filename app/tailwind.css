@@ -542,6 +542,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 500px;
 }
 
+.w-\[45px\] {
+  width: 45px;
+}
+
 .w-\[151px\] {
   width: 151px;
 }
@@ -558,20 +562,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 4rem;
 }
 
-.w-\[45px\] {
-  width: 45px;
-}
-
 .min-w-\[100px\] {
   min-width: 100px;
 }
 
-.flex-\[100\%\] {
-  flex: 100%;
-}
-
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.flex-\[100\%\] {
+  flex: 100%;
 }
 
 .flex-shrink-0 {
@@ -651,10 +651,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-center {
   background-position: center;
-}
-
-.bg-left {
-  background-position: left;
 }
 
 .bg-no-repeat {
@@ -782,10 +778,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:flex-row {
     flex-direction: row;
-  }
-
-  .sm\:flex-col {
-    flex-direction: column;
   }
 }
 

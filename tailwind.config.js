@@ -17,7 +17,7 @@ module.exports = {
       },
       colors: {
         gait: {
-          blue: '#93C5FB',
+          blue: '#93C5FB', // if you change this, be sure to change it in custom.css too
         }
       },
     },
