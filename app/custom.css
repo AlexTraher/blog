@@ -2,42 +2,45 @@
   --gait-text-blue: #93C5FB;
 }
 
-.collapsible-menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.5s ease-in-out;
-}
-
-#menuToggle:checked ~ .collapsible-menu {
-  max-height: 100px;
-}
-
-
-
-#menuToggle + label {
-  padding: 5px;
-  transition: all 0.5 ease-in-out;
-}
-
-#menuToggle + label::before {
-  content: '';
-  background-color: black;
-  width: 30px;
-  height: 4px;
-  display: block;
-  transition: all 0.5s ease-in-out;
-  transform: translateY(-5px);
-}
-
-#menuToggle + label::after {
-  content: '';
-  background-color: black;
-  width: 30px;
-  height: 4px;
-  display: block;
-  transition: all 0.5s ease-in-out;
-  transform: translateY(5px);
-  margin-top: -4px;
+/* @media */
+@media (max-width: 639px) {
+  .collapsible-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  #menuToggle:checked ~ .collapsible-menu {
+    max-height: 100px;
+  }
+  
+  
+  
+  #menuToggle + label {
+    padding: 5px;
+    transition: all 0.5 ease-in-out;
+  }
+  
+  #menuToggle + label::before {
+    content: '';
+    background-color: black;
+    width: 30px;
+    height: 4px;
+    display: block;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-5px);
+  }
+  
+  #menuToggle + label::after {
+    content: '';
+    background-color: black;
+    width: 30px;
+    height: 4px;
+    display: block;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(5px);
+    margin-top: -4px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

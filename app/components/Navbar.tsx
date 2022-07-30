@@ -15,13 +15,13 @@ const Navbar: VFC<NavbarProps> = () => {
       <label htmlFor="menuToggle" className="block cursor-pointer self-center sm:hidden"></label>
       <ul className="mt-4 justify-evenly collapsible-menu flex-col sm:flex-row sm:flex flex-shrink-0 flex-grow-0 flex-[100%]">
         <li className="flex-shrink-0 min-w-[100px] text-center">
-        <Link to="/" className="underline-offset-8 hover:underline">Home</Link>
+        <Link to="/" className="sm:underline-offset-8 hover:underline">Home</Link>
         </li>
         <li className="flex-shrink-0 min-w-[100px] text-center">
-        <Link to="/about" className="underline-offset-8 hover:underline">About</Link>
+        <Link to="/about" className="sm:underline-offset-8 sm:hover:underline">About</Link>
         </li>
         <li className="flex-shrink-0 min-w-[100px] text-center hidden sm:block">
-          <Link to="/" className="underline-offset-8 hover:underline">
+          <Link to="/" className="sm:underline-offset-8 sm:hover:underline">
             <div className={`
               w-[151px]
               h-[45px]
@@ -43,10 +43,10 @@ const Navbar: VFC<NavbarProps> = () => {
           </Link>
         </li>
         <li className="flex-shrink-0 min-w-[100px] text-center">
-        <Link to="/" className="underline-offset-8 hover:underline">Services</Link>
+        <Link to="/" className="sm:underline-offset-8 sm:hover:underline">Services</Link>
         </li>
         <li className="flex-shrink-0 min-w-[100px] text-center">
-        <Link to="/" className="underline-offset-8 hover:underline">Get in touch</Link>
+        <Link to="/" className="sm:underline-offset-8 sm:hover:underline">Get in touch</Link>
         </li>
       </ul>
     </nav>

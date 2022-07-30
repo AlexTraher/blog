@@ -510,6 +510,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: -1rem;
 }
 
+.ml-\[-1px\] {
+  margin-left: -1px;
+}
+
 .block {
   display: block;
 }
@@ -778,6 +782,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:underline-offset-8 {
+    text-underline-offset: 8px;
+  }
+
+  .sm\:hover\:underline:hover {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
   }
 }
 
