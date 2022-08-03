@@ -510,10 +510,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: -1rem;
 }
 
-.ml-\[-1px\] {
-  margin-left: -1px;
-}
-
 .block {
   display: block;
 }
@@ -686,10 +682,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.underline-offset-8 {
-  text-underline-offset: 8px;
 }
 
 .opacity-0 {
