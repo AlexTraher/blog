@@ -35,8 +35,9 @@ export default function App() {
       </head>
       <body className="bg-slate-100 dark:bg-black text-black dark:text-gait-blue">
         <Navbar />
-        
-        <Outlet />
+        <main className="p-4">
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === "development" && <LiveReload />}

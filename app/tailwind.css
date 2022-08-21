@@ -510,6 +510,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: -1rem;
 }
 
+.ml-\[-1px\] {
+  margin-left: -1px;
+}
+
+.ml-\[-2px\] {
+  margin-left: -2px;
+}
+
 .block {
   display: block;
 }
@@ -787,6 +795,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
+  .md\:ml-\[-2px\] {
+    margin-left: -2px;
+  }
+
   .md\:flex {
     display: flex;
   }

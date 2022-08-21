@@ -26,6 +26,7 @@ const Navbar: VFC<NavbarProps> = () => {
               w-[151px]
               h-[45px]
               mt-[-1rem]
+              md:ml-[-2px]
               bg-contain
               bg-no-repeat
               bg-center
@@ -43,10 +44,10 @@ const Navbar: VFC<NavbarProps> = () => {
           </Link>
         </li>
         <li className="flex-shrink-0 min-w-[100px] text-center">
-        <Link to="/" className="sm:underline-offset-8 sm:hover:underline">Services</Link>
+        <Link to="/services" className="sm:underline-offset-8 sm:hover:underline">Services</Link>
         </li>
         <li className="flex-shrink-0 min-w-[100px] text-center">
-        <Link to="/" className="sm:underline-offset-8 sm:hover:underline">Get in touch</Link>
+        <Link to="/get-in-touch" className="sm:underline-offset-8 sm:hover:underline">Get in touch</Link>
         </li>
       </ul>
     </nav>
