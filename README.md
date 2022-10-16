@@ -7,3 +7,5 @@ Built with [Remix](https://remix.run).
 - Integrate Cypress e2e tests
 - Add content
 - custom domain on vercel
+
+## Nice to Have
