@@ -1,5 +1,8 @@
 :root {
   --gait-text-blue: #93C5FB;
+  --gait-blue-dark: #020120;
+  --gait-green-light: #DCE5DD;
+  --gait-green-dark: #80B27B;
 }
 
 /* @media */
@@ -46,7 +49,7 @@
 @media (prefers-color-scheme: dark) {
   #menuToggle + label::before,
   #menuToggle + label::after {
-    background-color: var(--gait-text-blue);
+    background-color: var(--gait-green-dark);
   }
 }
 

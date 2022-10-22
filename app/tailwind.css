@@ -514,6 +514,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-\[20vw\] {
+  height: 20vw;
+}
+
 .h-\[45px\] {
   height: 45px;
 }
@@ -534,8 +538,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 500px;
 }
 
-.w-\[45px\] {
-  width: 45px;
+.h-\[60px\] {
+  height: 60px;
 }
 
 .w-\[151px\] {
@@ -606,9 +610,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: visible;
 }
 
-.bg-slate-100 {
+.bg-gait-green-light {
   --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+  background-color: rgb(220 229 221 / var(--tw-bg-opacity));
 }
 
 .bg-orange-600 {
@@ -621,12 +625,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
+.bg-gait-light {
+  background-image: url('/assets/gait-black.svg');
+}
+
 .bg-gait-i-light {
-  background-image: url('/assets/gait-i-light.svg');
+  background-image: url('/assets/gait-i-black.svg');
 }
 
 .bg-gait-software-light {
-  background-image: url('/assets/gait-software-light.svg');
+  background-image: url('/assets/gait-software-black.svg');
 }
 
 .bg-twitter-light {
@@ -657,9 +665,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 2rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.p-2 {
+  padding: 0.5rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .text-center {
@@ -669,6 +681,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .text-black {
@@ -688,6 +704,63 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-position: 20px;
 }
 
+.after\:m-auto::after {
+  content: var(--tw-content);
+  margin: auto;
+}
+
+.after\:m-2::after {
+  content: var(--tw-content);
+  margin: 0.5rem;
+}
+
+.after\:m-4::after {
+  content: var(--tw-content);
+  margin: 1rem;
+}
+
+.after\:mx-4::after {
+  content: var(--tw-content);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.after\:w-\[50\%\]::after {
+  content: var(--tw-content);
+  width: 50%;
+}
+
+.after\:w-\[90vw\]::after {
+  content: var(--tw-content);
+  width: 90vw;
+}
+
+.after\:w-\[80\%\]::after {
+  content: var(--tw-content);
+  width: 80%;
+}
+
+.after\:border-b-2::after {
+  content: var(--tw-content);
+  border-bottom-width: 2px;
+}
+
+.after\:border-black::after {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.after\:p-2::after {
+  content: var(--tw-content);
+  padding: 0.5rem;
+}
+
+.after\:content-\[\'\'\]::after {
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -703,24 +776,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .motion-reduce\:bg-gait-software-light {
-    background-image: url('/assets/gait-software-light.svg');
-  }
-}
-
 @media (prefers-color-scheme: dark) {
-  .dark\:bg-black {
+  .dark\:bg-gait-blue-dark {
     --tw-bg-opacity: 1;
-    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+    background-color: rgb(2 1 32 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-gait-dark {
+    background-image: url('/assets/gait-green.svg');
   }
 
   .dark\:bg-gait-i-dark {
-    background-image: url('/assets/gait-i-dark.svg');
+    background-image: url('/assets/gait-i-green.svg');
   }
 
   .dark\:bg-gait-software-dark {
-    background-image: url('/assets/gait-software-dark.svg');
+    background-image: url('/assets/gait-software-green.svg');
   }
 
   .dark\:bg-twitter-dark {
@@ -731,17 +802,15 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-image: url('/assets/github-dark.svg');
   }
 
-  .dark\:text-gait-blue {
+  .dark\:text-gait-green-dark {
     --tw-text-opacity: 1;
-    color: rgb(147 197 251 / var(--tw-text-opacity));
+    color: rgb(128 178 123 / var(--tw-text-opacity));
   }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  @media (prefers-color-scheme: dark) {
-    .motion-reduce\:dark\:bg-gait-software-dark {
-      background-image: url('/assets/gait-software-dark.svg');
-    }
+  .after\:dark\:border-gait-green-dark::after {
+    content: var(--tw-content);
+    --tw-border-opacity: 1;
+    border-color: rgb(128 178 123 / var(--tw-border-opacity));
   }
 }
 
@@ -767,8 +836,23 @@ Ensure the default browser behavior of the `hidden` attribute.
     flex-direction: row;
   }
 
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .sm\:underline {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+  }
+
   .sm\:underline-offset-8 {
     text-underline-offset: 8px;
+  }
+
+  .after\:sm\:border-0::after {
+    content: var(--tw-content);
+    border-width: 0px;
   }
 
   .sm\:hover\:underline:hover {
@@ -786,17 +870,41 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: flex;
   }
 
-  .md\:bg-none {
-    background-image: none;
-  }
-
   .md\:bg-gait-software-light {
-    background-image: url('/assets/gait-software-light.svg');
+    background-image: url('/assets/gait-software-black.svg');
   }
+}
 
+@media (prefers-reduced-motion: no-preference) {
+  @media (min-width: 768px) {
+    .motion-safe\:md\:bg-none {
+      background-image: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @media (min-width: 768px) {
+    .motion-reduce\:md\:bg-gait-software-light {
+      background-image: url('/assets/gait-software-black.svg');
+    }
+  }
+}
+
+@media (min-width: 768px) {
   @media (prefers-color-scheme: dark) {
     .md\:dark\:bg-gait-software-dark {
-      background-image: url('/assets/gait-software-dark.svg');
+      background-image: url('/assets/gait-software-green.svg');
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @media (min-width: 768px) {
+    @media (prefers-color-scheme: dark) {
+      .motion-reduce\:md\:dark\:bg-gait-software-dark {
+        background-image: url('/assets/gait-software-green.svg');
+      }
     }
   }
 }

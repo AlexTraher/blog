@@ -7,17 +7,22 @@ module.exports = {
         "twitter-dark": "url('/assets/twitter-dark.svg')",
         "github-light": "url('/assets/github-light.svg')",
         "github-dark": "url('/assets/github-dark.svg')",
-        "gait-light": "url('/assets/gait-light.svg')",
-        "gait-i-light": "url('/assets/gait-i-light.svg')",
-        "gait-software-light": "url('/assets/gait-software-light.svg')",
-        "gait-dark": "url('/assets/gait-dark.svg')",
-        "gait-i-dark": "url('/assets/gait-i-dark.svg')",
-        "gait-software-dark": "url('/assets/gait-software-dark.svg')",
+        "gait-light": "url('/assets/gait-black.svg')",
+        "gait-i-light": "url('/assets/gait-i-black.svg')",
+        "gait-software-light": "url('/assets/gait-software-black.svg')",
+        "gait-dark": "url('/assets/gait-green.svg')",
+        "gait-i-dark": "url('/assets/gait-i-green.svg')",
+        "gait-software-dark": "url('/assets/gait-software-green.svg')",
         
       },
       colors: {
         gait: {
-          blue: '#93C5FB', // if you change this, be sure to change it in custom.css too
+           // if you change these, be sure to change it in custom.css too
+          blue: "#93C5FB",
+          "blue-dark": "#020120",
+          "green-light": "#DCE5DD",
+          "green-dark": "#80B27B"
+
         }
       },
     },

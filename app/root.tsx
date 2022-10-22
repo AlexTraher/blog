@@ -25,7 +25,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-slate-100 dark:bg-black text-black dark:text-gait-blue">
+      <body className="bg-gait-green-light dark:bg-gait-blue-dark text-black dark:text-gait-green-dark">
         <Navbar />
         <main className="p-4">
           <Outlet />
