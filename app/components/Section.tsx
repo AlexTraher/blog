@@ -16,7 +16,7 @@ type TSection = FC<PropsWithChildren<Props>> & {
 const Section: TSection = ({ header, children }) => {
   return (
     <section className="flex flex-col w-[100%]">
-      <h2 className="bg-gait-green-light text-center md:text-left text-2xl font-header font-light py-4 px-4 mx-[-20px]">
+      <h2 className="bg-gait-green-light dark:bg-gait-blue text-center md:text-left text-2xl font-header font-light py-4 px-4 mx-[-20px]">
         <span className="md:ml-[20vw]">{header}</span>
       </h2>
       <div className="flex justify-between">

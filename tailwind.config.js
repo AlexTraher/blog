@@ -10,16 +10,17 @@ module.exports = {
         "gait-light": "url('/assets/gait-black.svg')",
         "gait-i-light": "url('/assets/gait-i-black.svg')",
         "gait-software-light": "url('/assets/gait-software-black.svg')",
-        "gait-dark": "url('/assets/gait-green.svg')",
-        "gait-i-dark": "url('/assets/gait-i-green.svg')",
-        "gait-software-dark": "url('/assets/gait-software-green.svg')",
-        "icons8-external-link": "url('/assets/icons8-external-link.svg')"
+        "gait-dark": "url('/assets/gait-white.svg')",
+        "gait-i-dark": "url('/assets/gait-i-white.svg')",
+        "gait-software-dark": "url('/assets/gait-software-white.svg')",
+        "icons8-external-link": "url('/assets/icons8-external-link.svg')",
+        "icons8-external-link-dark": "url('/assets/icons8-external-link-dark.svg')"
         
       },
       colors: {
         gait: {
            // if you change these, be sure to change it in custom.css too
-          blue: "#93C5FB",
+          blue: "#9CBEE2",
           "blue-dark": "#020120",
           "green-light": "#DCE5DD",
           "green-dark": "#80B27B",

@@ -504,16 +504,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
-.ml-\[-10px\] {
-  margin-left: -10px;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
+}
+
+.ml-\[-10px\] {
+  margin-left: -10px;
 }
 
 .block {
@@ -564,8 +560,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 151px;
 }
 
-.w-\[22px\] {
-  width: 22px;
+.w-\[15px\] {
+  width: 15px;
 }
 
 .w-\[200px\] {
@@ -578,10 +574,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-16 {
   width: 4rem;
-}
-
-.w-\[15px\] {
-  width: 15px;
 }
 
 .min-w-\[120px\] {
@@ -705,32 +697,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-size: contain;
 }
 
-.bg-center {
-  background-position: center;
-}
-
-.bg-\[center_top_1rem\] {
-  background-position: center top 1rem;
-}
-
-.bg-\[center_top_10px\] {
-  background-position: center top 10px;
-}
-
-.bg-\[center_top_15px\] {
-  background-position: center top 15px;
-}
-
-.bg-\[center_top_5px\] {
-  background-position: center top 5px;
-}
-
-.bg-\[center_top_6px\] {
-  background-position: center top 6px;
-}
-
 .bg-\[center_top_8px\] {
   background-position: center top 8px;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .bg-no-repeat {
@@ -770,8 +742,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.5rem;
 }
 
-.pt-1 {
-  padding-top: 0.25rem;
+.pt-\[23px\] {
+  padding-top: 23px;
+}
+
+.pt-\[22px\] {
+  padding-top: 22px;
 }
 
 .text-center {
@@ -859,12 +835,17 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-color: rgb(2 1 32 / var(--tw-bg-opacity));
   }
 
+  .dark\:bg-gait-blue {
+    --tw-bg-opacity: 1;
+    background-color: rgb(156 190 226 / var(--tw-bg-opacity));
+  }
+
   .dark\:bg-gait-i-dark {
-    background-image: url('/assets/gait-i-green.svg');
+    background-image: url('/assets/gait-i-white.svg');
   }
 
   .dark\:bg-gait-software-dark {
-    background-image: url('/assets/gait-software-green.svg');
+    background-image: url('/assets/gait-software-white.svg');
   }
 
   .dark\:bg-twitter-dark {
@@ -875,9 +856,17 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-image: url('/assets/github-dark.svg');
   }
 
-  .dark\:text-gait-green-dark {
+  .dark\:bg-icons8-external-link-dark {
+    background-image: url('/assets/icons8-external-link-dark.svg');
+  }
+
+  .dark\:pt-\[23px\] {
+    padding-top: 23px;
+  }
+
+  .dark\:text-white {
     --tw-text-opacity: 1;
-    color: rgb(128 178 123 / var(--tw-text-opacity));
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 
@@ -927,12 +916,28 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 20vw;
   }
 
+  .md\:mt-4 {
+    margin-top: 1rem;
+  }
+
   .md\:block {
     display: block;
   }
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
   }
 
   .md\:bg-gait-software-light {
@@ -945,6 +950,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:text-left {
     text-align: left;
+  }
+
+  .md\:underline {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+  }
+
+  .md\:underline-offset-8 {
+    text-underline-offset: 8px;
+  }
+
+  .md\:hover\:underline:hover {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
   }
 }
 
@@ -967,7 +986,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 768px) {
   @media (prefers-color-scheme: dark) {
     .md\:dark\:bg-gait-software-dark {
-      background-image: url('/assets/gait-software-green.svg');
+      background-image: url('/assets/gait-software-white.svg');
     }
   }
 }
@@ -976,7 +995,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   @media (min-width: 768px) {
     @media (prefers-color-scheme: dark) {
       .motion-reduce\:md\:dark\:bg-gait-software-dark {
-        background-image: url('/assets/gait-software-green.svg');
+        background-image: url('/assets/gait-software-white.svg');
       }
     }
   }

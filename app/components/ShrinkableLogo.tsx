@@ -8,7 +8,7 @@ const END_WIDTH_PX = 151;
 const END_HEIGHT_PX = 45;
 
 // To help reduce flicker on first load
-const INITIAL_INTERSECTION = 0.14595851639233237 as const;
+const INITIAL_INTERSECTION = 0.15450408612911692 as const;
 
 const getThresholds = (stepCount: number) => {
   const step = 1 / stepCount;
@@ -102,7 +102,7 @@ const ShrinkableLogo = () => {
   const [multiplier, ref] = useScrollSize();
   return (
     <>
-      <section className="justify-start motion-safe:sticky top-0 z-20 p-4 w-[200px] overflow-visible hidden md:flex ml-[-10px]">
+      <section className="justify-start motion-safe:sticky top-0 z-20 p-4 w-[200px] overflow-visible hidden md:flex ml-[-10px] pt-[22px] dark:pt-[23px]">
         <div
           style={getStyle(multiplier)}
           className="bg-gait-software-light dark:bg-gait-software-dark bg-contain bg-no-repeat flex-shrink-0 max-w-[800px]"></div>

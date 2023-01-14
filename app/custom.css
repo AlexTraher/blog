@@ -7,15 +7,15 @@
 }
 
 /* @media */
-@media (max-width: 639px) {
+@media (max-width: 769px) {
   .collapsible-menu {
     max-height: 0;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
   }
   
   .collapsible-menu-open {
-    max-height: 150px;
+    max-height: 250px;
   }
   
   
@@ -50,7 +50,7 @@
 @media (prefers-color-scheme: dark) {
   #menuToggle + label::before,
   #menuToggle + label::after {
-    background-color: var(--gait-green-dark);
+    background-color: white;
   }
 }
 
