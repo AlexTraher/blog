@@ -21,7 +21,8 @@ module.exports = {
           blue: "#93C5FB",
           "blue-dark": "#020120",
           "green-light": "#DCE5DD",
-          "green-dark": "#80B27B"
+          "green-dark": "#80B27B",
+          "paper": "#EBEFEC"
 
         }
       },
@@ -29,6 +30,17 @@ module.exports = {
    
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
+      header: ['Barlow', 'Inter', 'sans-serif'],
+      body: ['Telugu Sangam MN', 'Inter', 'sans-serif']
+    },
+    fontSize: {
+      sm: '0.8rem',
+      base: ['20px', '40px'],
+      xl: '1.25rem',
+      '2xl': ['40px', '60px'],
+      '3xl': '1.953rem',
+      '4xl': '2.441rem',
+      '5xl': '3.052rem',
     }
   },
   variants: {},

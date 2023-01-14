@@ -12,7 +12,7 @@ const Navbar: FC<NavbarProps> = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="
-      sticky top-0 py-4 dark:bg-gait-blue-dark bg-gait-green-light z-10 flex px-6 flex-col sm:flex-row
+      sticky top-0 py-4 dark:bg-gait-blue-dark bg-gait-paper z-10 flex px-6 flex-col sm:flex-row
     ">
       {/* TODO<a className="hidden md:block sm:underline-offset-8 hover:underline" href="mailto:hello@gait.dev">hello@gait.dev</a> */}
       <div className="self-center flex justify-between sm:justify-start w-[100%]">
@@ -40,17 +40,20 @@ const Navbar: FC<NavbarProps> = () => {
         <label htmlFor="menuToggle" className="block cursor-pointer self-center sm:hidden justify-self-end"></label>
       </div>
       <ul className={`mt-4 collapsible-menu flex-col sm:flex-row sm:flex flex-shrink-1 flex-grow-1 flex-[100%] justify-end ${menuOpen && 'collapsible-menu-open'}`}>
-        <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center">
-        <NavLink to="/" className={activeUnderline("sm:underline-offset-8 hover:underline uppercase")}>Home</NavLink>
+        <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
+        <NavLink to="/" className={activeUnderline("sm:underline-offset-8 sm:hover:underline uppercase block w-[100%]")}>Home</NavLink>
         </li>
-        <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center">
-        <NavLink to="/about" className={activeUnderline("sm:underline-offset-8 sm:hover:underline uppercase")}>About</NavLink>
+        <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
+        <NavLink to="/services" className={activeUnderline("sm:underline-offset-8 sm:hover:underline uppercase block w-[100%]")}>Services</NavLink>
         </li>
-        <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center">
-        <NavLink to="/services" className={activeUnderline("sm:underline-offset-8 sm:hover:underline uppercase")}>Services</NavLink>
+        <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
+          <NavLink to="/expertise" className={activeUnderline("sm:underline-offset-8 sm:hover:underline uppercase block w-[100%]")}>Expertise</NavLink>
         </li>
-        <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center">
-        <NavLink to="/get-in-touch" className={activeUnderline("sm:underline-offset-8 sm:hover:underline uppercase")}>Get in touch</NavLink>
+        <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
+          <a href="https://blog.gait.dev" className={"sm:underline-offset-8 sm:hover:underline uppercase block w-[100%]"}>Blog</a>
+        </li>
+        <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
+        <NavLink to="/get-in-touch" className={activeUnderline("sm:underline-offset-8 sm:hover:underline uppercase block w-[100%]")}>Get in touch</NavLink>
         </li>
       </ul>
       

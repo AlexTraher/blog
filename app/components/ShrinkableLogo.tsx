@@ -100,7 +100,6 @@ const getStyle = (multiplier: number) => {
 
 const ShrinkableLogo = () => {
   const [multiplier, ref] = useScrollSize();
-  debugger;
   return (
     <>
       <section className="justify-start motion-safe:sticky top-0 z-20 p-4 w-[200px] overflow-visible hidden md:flex ml-[-10px]">

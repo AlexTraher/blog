@@ -3,7 +3,6 @@ import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@re
 import styles from "./tailwind.css";
 import customStyles from "./custom.css";
 import Navbar from "./components/Navbar";
-import ShrinkableLogo from "./components/ShrinkableLogo";
 
 export function links() {
   return [
@@ -25,7 +24,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-gait-green-light dark:bg-gait-blue-dark text-black dark:text-gait-green-dark">
+      <body className="bg-gait-paper dark:bg-gait-blue-dark text-black dark:text-gait-green-dark font-body sub-pixel-antialiased text-base">
         <Navbar />
         <main className="p-4">
           <Outlet />
