@@ -13,7 +13,7 @@
     transition: all 0.5s ease-in-out;
   }
   
-  #menuToggle:checked ~ .collapsible-menu {
+  .collapsible-menu-open {
     max-height: 100px;
   }
   
