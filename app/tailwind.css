@@ -490,14 +490,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: -20px;
 }
 
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .mt-4 {
@@ -578,10 +578,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-grow-0 {
   flex-grow: 0;
-}
-
-.flex-grow-\[\$\{col\}\] {
-  flex-grow: ${col};
 }
 
 .cursor-pointer {
@@ -739,6 +735,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 40px;
 }
 
+.text-sm {
+  font-size: 0.8rem;
+}
+
 .text-2xl {
   font-size: 40px;
   line-height: 60px;
@@ -746,10 +746,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-xl {
   font-size: 1.25rem;
-}
-
-.text-sm {
-  font-size: 0.8rem;
 }
 
 .font-semibold {
@@ -836,14 +832,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:hidden {
     display: none;
-  }
-
-  .sm\:flex-grow-\[\$\{smCol\}\] {
-    flex-grow: ${smCol};
-  }
-
-  .sm\:flex-grow-\[\$\{mdCol\}\] {
-    flex-grow: ${mdCol};
   }
 
   .sm\:flex-row {
