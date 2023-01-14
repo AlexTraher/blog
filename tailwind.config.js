@@ -13,6 +13,7 @@ module.exports = {
         "gait-dark": "url('/assets/gait-green.svg')",
         "gait-i-dark": "url('/assets/gait-i-green.svg')",
         "gait-software-dark": "url('/assets/gait-software-green.svg')",
+        "icons8-external-link": "url('/assets/icons8-external-link.svg')"
         
       },
       colors: {

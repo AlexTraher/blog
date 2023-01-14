@@ -50,10 +50,12 @@ const Navbar: FC<NavbarProps> = () => {
           <NavLink to="/expertise" className={activeUnderline("sm:underline-offset-8 sm:hover:underline uppercase block w-[100%]")}>Expertise</NavLink>
         </li>
         <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
-          <a href="https://blog.gait.dev" className={"sm:underline-offset-8 sm:hover:underline uppercase block w-[100%]"}>Blog</a>
+         <NavLink to="/get-in-touch" className={activeUnderline("sm:underline-offset-8 sm:hover:underline uppercase block w-[100%]")}>Get in touch</NavLink>
         </li>
         <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
-        <NavLink to="/get-in-touch" className={activeUnderline("sm:underline-offset-8 sm:hover:underline uppercase block w-[100%]")}>Get in touch</NavLink>
+          <a href="https://blog.gait.dev" className={"sm:underline-offset-8 sm:hover:underline uppercase block w-[100%]"}>
+            Blog
+            <span className="ml-2 bg-icons8-external-link w-[15px] h-[22px] inline-block bg-contain bg-no-repeat bg-[center_top_8px] content-['']"></span></a>
         </li>
       </ul>
       
