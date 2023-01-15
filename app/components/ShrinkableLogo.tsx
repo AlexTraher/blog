@@ -8,7 +8,7 @@ const END_WIDTH_PX = 151;
 const END_HEIGHT_PX = 45;
 
 // To help reduce flicker on first load
-const INITIAL_INTERSECTION = 0.15450408612911692 as const;
+const INITIAL_INTERSECTION = 0.14595851639233237 as const;
 
 const getThresholds = (stepCount: number) => {
   const step = 1 / stepCount;

@@ -3,6 +3,7 @@ import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@re
 import styles from "./tailwind.css";
 import customStyles from "./custom.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export function links() {
   return [
@@ -29,6 +30,7 @@ export default function App() {
         <main className="p-4">
           <Outlet />
         </main>
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === "development" && <LiveReload />}

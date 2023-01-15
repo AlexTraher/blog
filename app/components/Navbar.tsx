@@ -51,7 +51,7 @@ const Navbar: FC<NavbarProps> = () => {
         <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
           <a href="https://blog.gait.dev" className={"md:underline-offset-8 md:hover:underline uppercase block w-[100%]"}>
             Blog
-            <span className="ml-2 bg-icons8-external-link dark:bg-icons8-external-link-dark w-[15px] h-[22px] inline-block bg-contain bg-no-repeat bg-[center_top_8px] content-['']"></span></a>
+            <span className="ml-2 bg-icons8-external-link dark:bg-icons8-external-link-dark w-[15px] h-[15px] inline-block bg-contain bg-no-repeat content-['']"></span></a>
         </li>
         <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
          <a href="mailto:hello@gait.dev" className="md:underline-offset-8 md:hover:underline block w-[100%] text-[15px]">hello@gait.dev</a>

@@ -508,11 +508,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -557,16 +552,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 3rem;
 }
 
-.h-16 {
-  height: 4rem;
-}
-
 .h-full {
   height: 100%;
 }
 
 .h-\[500px\] {
   height: 500px;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[30px\] {
+  height: 30px;
+}
+
+.h-\[18px\] {
+  height: 18px;
+}
+
+.h-\[16px\] {
+  height: 16px;
+}
+
+.h-\[15px\] {
+  height: 15px;
+}
+
+.h-\[14px\] {
+  height: 14px;
 }
 
 .min-h-\[80px\] {
@@ -605,8 +620,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 3rem;
 }
 
-.w-16 {
-  width: 4rem;
+.w-\[100px\] {
+  width: 100px;
 }
 
 .min-w-\[120px\] {
@@ -735,6 +750,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
+.bg-gait-green-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(128 178 123 / var(--tw-bg-opacity));
+}
+
 .bg-gait-i-light {
   background-image: url('/assets/gait-i-black.svg');
 }
@@ -767,16 +787,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-position: center;
 }
 
+.bg-\[center_top_1px\] {
+  background-position: center top 1px;
+}
+
+.bg-\[center_top_0px\] {
+  background-position: center top 0px;
+}
+
 .bg-no-repeat {
   background-repeat: no-repeat;
 }
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-8 {
-  padding: 2rem;
 }
 
 .py-4 {
@@ -804,8 +828,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.5rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pt-\[19px\] {
   padding-top: 19px;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-center {
@@ -976,15 +1013,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
-  .sm\:mx-12 {
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
-
-  .sm\:first\:border-b-0:first-child {
-    border-bottom-width: 0px;
-  }
-
   .first\:sm\:border-b-0:first-child {
     border-bottom-width: 0px;
   }
