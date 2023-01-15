@@ -12,7 +12,7 @@ const Navbar: FC<NavbarProps> = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="
-      sticky top-0 py-4 dark:bg-gait-blue-dark bg-gait-paper z-10 flex px-6 flex-col md:flex-row min-h-[80px]
+      sticky top-0 flex-shrink-0 flex-grow-0 py-4 dark:bg-gait-blue-dark bg-gait-paper z-10 flex px-6 flex-col md:flex-row min-h-[80px] z-20
     ">
       <div className="self-center flex justify-between md:justify-start w-[100%]">
         <NavLink to="/" className="md:underline-offset-8 md:hover:underline">

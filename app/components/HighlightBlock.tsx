@@ -8,7 +8,7 @@ interface Props {
 const HighlightBlock: FC<PropsWithChildren<Props>> = ({ header, children, className = "" }) => {
   return (
     // TODO dark theme
-    <section className={`bg-white dark:bg-gait-blue-mid rounded ${className} p-4`}>
+    <section className={`bg-white dark:bg-gait-blue-mid rounded p-4 ${className}`}>
       {header ? <h3 className="
         text-center text-xl
         font-header font-light 

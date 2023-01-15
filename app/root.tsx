@@ -18,22 +18,24 @@ export const meta: MetaFunction = () => {
 
 export default function App() {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body className="flex bg-gait-paper dark:bg-gait-blue-dark text-black dark:text-white font-body sub-pixel-antialiased text-base flex-col h-full">
+      <body className="bg-gait-paper dark:bg-gait-blue-dark text-black dark:text-white font-body sub-pixel-antialiased text-base flex-col h-full">
         <Navbar />
-        <main className="p-4 flex-[100%]">
-          <Outlet />
-        </main>
-        <Footer />
-        <ScrollRestoration />
-        <Scripts />
-        {process.env.NODE_ENV === "development" && <LiveReload />}
+          <main className="p-4">
+            <div className="w-2 h-[20px]"></div>
+            <Outlet />
+          </main>
+          <Footer />
+          
+          <ScrollRestoration />
+          <Scripts />
+          {process.env.NODE_ENV === "development" && <LiveReload />}
       </body>
     </html>
   );

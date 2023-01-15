@@ -16,9 +16,9 @@ module.exports = {
         "icons8-external-link": "url('/assets/icons8-external-link.svg')",
         "icons8-external-link-dark": "url('/assets/icons8-external-link-dark.svg')",
         "gauge-light": "url('/assets/gauge.svg')",
-        "gauge-dark": "url('/assets/gauge.svg')",
+        "gauge-dark": "url('/assets/gauge-white.svg')",
         "user-light": "url('/assets/user.svg')",
-        "user-dark": "url('/assets/user.svg')",
+        "user-dark": "url('/assets/user-white.svg')",
       },
       colors: {
         gait: {

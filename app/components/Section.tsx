@@ -3,7 +3,7 @@ import { FC, PropsWithChildren } from "react";
 
 
 interface Props {
-  header: string
+  header?: string
   headerPosition?: 'left' | 'right',
   columns?: number
 }
@@ -17,16 +17,17 @@ type TSection = FC<PropsWithChildren<Props>> & {
 const Section: TSection = ({ header, children, headerPosition = 'left' }) => {
   return (
     <section className="flex flex-col w-[100%]">
-      <h2 className={`
+      {header ? <h2 className={`
         bg-gait-green-light dark:bg-gait-blue 
         text-center text-2xl ${headerPosition === 'left' ? 'md:text-left' : 'md:text-right'}
         font-header font-light 
         py-4 px-8 mx-[-20px]
         sticky top-[80px]
-        underline-offset-8 underline decoration-white decoration-2`
+        underline-offset-8 underline decoration-white decoration-2
+        z-10`
       }>
         &nbsp;&nbsp;&nbsp;{header}&nbsp;&nbsp;&nbsp;
-      </h2>
+      </h2> : null}
       <div className="flex justify-between flex-wrap">
         {children}
       </div>
