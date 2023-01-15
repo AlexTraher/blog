@@ -4,6 +4,7 @@ import { FC, PropsWithChildren } from "react";
 
 interface Props {
   header: string
+  headerPosition?: 'left' | 'right',
   columns?: number
 }
 
@@ -13,30 +14,41 @@ type TSection = FC<PropsWithChildren<Props>> & {
 
 
 
-const Section: TSection = ({ header, children }) => {
+const Section: TSection = ({ header, children, headerPosition = 'left' }) => {
   return (
     <section className="flex flex-col w-[100%]">
-      <h2 className="bg-gait-green-light dark:bg-gait-blue text-center md:text-left text-2xl font-header font-light py-4 px-4 mx-[-20px]">
-        <span className="md:ml-[20vw]">{header}</span>
+      <h2 className={`
+        bg-gait-green-light dark:bg-gait-blue 
+        text-center text-2xl ${headerPosition === 'left' ? 'md:text-left' : 'md:text-right'}
+        font-header font-light 
+        py-4 px-8 mx-[-20px]
+        sticky top-[80px]
+        underline-offset-8 underline decoration-white decoration-2`
+      }>
+        &nbsp;&nbsp;&nbsp;{header}&nbsp;&nbsp;&nbsp;
       </h2>
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-wrap">
         {children}
       </div>
     </section>
   )
 }
 
-type SupportedCols = 1|2|3|4|5|6|7|8|9|10|11|12;
 interface SectionColumnProps {
-  col: SupportedCols,
-  smCol?: SupportedCols
-  mdCol?: SupportedCols
+  className?: string;
 }
 
-const SectionColumn: FC<PropsWithChildren<SectionColumnProps>> = ({ children }) => {
+const SectionColumn: FC<PropsWithChildren<SectionColumnProps>> = ({ children, className = "" }) => {
   return (
     <div 
-      className="border-r-white border-r-2 last:border-r-0 px-2 py-2 my-2 flex-[100%]">
+      className={`
+        first:border-b-white first:border-b-2 border-b-0 md:first:border-b-0 md:first:border-r-white md:first:border-r-2
+        px-4 py-2 my-2
+        flex
+        flex-col
+        justify-center
+        ${className}`
+      }>
       {children}
     </div>
   )

@@ -12,7 +12,7 @@ const Navbar: FC<NavbarProps> = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="
-      sticky top-0 py-4 dark:bg-gait-blue-dark bg-gait-paper z-10 flex px-6 flex-col md:flex-row
+      sticky top-0 py-4 dark:bg-gait-blue-dark bg-gait-paper z-10 flex px-6 flex-col md:flex-row min-h-[80px]
     ">
       <div className="self-center flex justify-between md:justify-start w-[100%]">
         <NavLink to="/" className="md:underline-offset-8 md:hover:underline">
@@ -49,12 +49,12 @@ const Navbar: FC<NavbarProps> = () => {
           <NavLink to="/expertise" className={activeUnderline("md:underline-offset-8 md:hover:underline uppercase block w-[100%]")}>Expertise</NavLink>
         </li>
         <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
-         <NavLink to="/get-in-touch" className={activeUnderline("md:underline-offset-8 md:hover:underline uppercase block w-[100%]")}>Get in touch</NavLink>
-        </li>
-        <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
           <a href="https://blog.gait.dev" className={"md:underline-offset-8 md:hover:underline uppercase block w-[100%]"}>
             Blog
             <span className="ml-2 bg-icons8-external-link dark:bg-icons8-external-link-dark w-[15px] h-[22px] inline-block bg-contain bg-no-repeat bg-[center_top_8px] content-['']"></span></a>
+        </li>
+        <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
+         <a href="mailto:hello@gait.dev" className="md:underline-offset-8 md:hover:underline block w-[100%] text-[15px]">hello@gait.dev</a>
         </li>
       </ul>
       

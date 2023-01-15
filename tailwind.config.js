@@ -22,6 +22,7 @@ module.exports = {
            // if you change these, be sure to change it in custom.css too
           blue: "#9CBEE2",
           "blue-dark": "#020120",
+          "blue-mid": "#525885",
           "green-light": "#DCE5DD",
           "green-dark": "#80B27B",
           "paper": "#EBEFEC"
@@ -37,8 +38,9 @@ module.exports = {
     },
     fontSize: {
       sm: '0.8rem',
-      base: ['20px', '40px'],
-      xl: '1.25rem',
+      base: ['14px', '30px'],
+      lg: ['20px', '30px'],
+      xl: ['30px', '50px'],
       '2xl': ['40px', '60px'],
       '3xl': '1.953rem',
       '4xl': '2.441rem',
