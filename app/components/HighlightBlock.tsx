@@ -13,7 +13,6 @@ const HighlightBlock: FC<PropsWithChildren<Props>> = ({ header, children, classN
         text-center text-xl
         font-header font-light 
         py-4 px-8 mx-[-20px]
-        sticky top-[80px]
         underline-offset-8 underline decoration-gait-paper">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{header}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </h3> : null}

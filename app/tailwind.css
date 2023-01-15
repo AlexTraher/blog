@@ -493,19 +493,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   order: 9999;
 }
 
-.mx-\[-20px\] {
-  margin-left: -20px;
-  margin-right: -20px;
-}
-
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
+.mx-\[-20px\] {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .ml-2 {
@@ -518,6 +523,30 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ml-8 {
   margin-left: 2rem;
+}
+
+.ml-\[-20px\] {
+  margin-left: -20px;
+}
+
+.ml-\[-40px\] {
+  margin-left: -40px;
+}
+
+.ml-\[-30px\] {
+  margin-left: -30px;
+}
+
+.ml-\[25\%\] {
+  margin-left: 25%;
+}
+
+.mr-\[25\%\] {
+  margin-right: 25%;
+}
+
+.mr-\[-30px\] {
+  margin-right: -30px;
 }
 
 .block {
@@ -536,12 +565,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-\[30px\] {
+  height: 30px;
+}
+
 .h-\[45px\] {
   height: 45px;
 }
 
-.h-\[22px\] {
-  height: 22px;
+.h-\[15px\] {
+  height: 15px;
 }
 
 .h-\[20vh\] {
@@ -552,44 +585,44 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 3rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-\[500px\] {
-  height: 500px;
-}
-
 .h-\[100px\] {
   height: 100px;
 }
 
-.h-\[30px\] {
-  height: 30px;
+.h-\[50px\] {
+  height: 50px;
 }
 
-.h-\[18px\] {
-  height: 18px;
+.h-\[70px\] {
+  height: 70px;
 }
 
-.h-\[16px\] {
-  height: 16px;
+.h-\[60px\] {
+  height: 60px;
 }
 
-.h-\[15px\] {
-  height: 15px;
+.h-\[100\%\] {
+  height: 100%;
 }
 
-.h-\[14px\] {
-  height: 14px;
+.h-full {
+  height: 100%;
 }
 
 .min-h-\[80px\] {
   min-height: 80px;
 }
 
+.min-h-\[100\%\] {
+  min-height: 100%;
+}
+
 .w-\[100\%\] {
   width: 100%;
+}
+
+.w-\[100px\] {
+  width: 100px;
 }
 
 .w-\[151px\] {
@@ -620,8 +653,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 3rem;
 }
 
-.w-\[100px\] {
-  width: 100px;
+.w-\[75\%\] {
+  width: 75%;
+}
+
+.w-\[50px\] {
+  width: 50px;
 }
 
 .min-w-\[120px\] {
@@ -668,6 +705,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-wrap: wrap;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -690,6 +731,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-around {
   justify-content: space-around;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .self-center {
@@ -730,29 +775,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(235 239 236 / var(--tw-bg-opacity));
 }
 
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .bg-gait-green-light {
   --tw-bg-opacity: 1;
   background-color: rgb(220 229 221 / var(--tw-bg-opacity));
 }
 
-.bg-orange-600 {
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.bg-gait-green-dark {
-  --tw-bg-opacity: 1;
-  background-color: rgb(128 178 123 / var(--tw-bg-opacity));
+.bg-gait-software-light {
+  background-image: url('/assets/gait-software-black.svg');
 }
 
 .bg-gait-i-light {
@@ -763,10 +797,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('/assets/icons8-external-link.svg');
 }
 
-.bg-gait-software-light {
-  background-image: url('/assets/gait-software-black.svg');
-}
-
 .bg-twitter-light {
   background-image: url('/assets/twitter-light.svg');
 }
@@ -775,24 +805,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('/assets/github-light.svg');
 }
 
-.bg-contain {
-  background-size: contain;
+.bg-gauge-light {
+  background-image: url('/assets/gauge.svg');
 }
 
-.bg-\[center_top_8px\] {
-  background-position: center top 8px;
+.bg-user-light {
+  background-image: url('/assets/user.svg');
+}
+
+.bg-contain {
+  background-size: contain;
 }
 
 .bg-center {
   background-position: center;
 }
 
-.bg-\[center_top_1px\] {
-  background-position: center top 1px;
+.bg-right {
+  background-position: right;
 }
 
-.bg-\[center_top_0px\] {
-  background-position: center top 0px;
+.bg-left {
+  background-position: left;
+}
+
+.bg-\[top_10px\] {
+  background-position: top 10px;
+}
+
+.bg-\[right_top_10px\] {
+  background-position: right top 10px;
+}
+
+.bg-\[right_top_5px\] {
+  background-position: right top 5px;
 }
 
 .bg-no-repeat {
@@ -801,6 +847,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-4 {
@@ -823,30 +878,33 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pt-\[19px\] {
   padding-top: 19px;
 }
 
-.pb-8 {
-  padding-bottom: 2rem;
+.pl-\[40px\] {
+  padding-left: 40px;
 }
 
-.pt-4 {
-  padding-top: 1rem;
+.pl-\[80px\] {
+  padding-left: 80px;
+}
+
+.pr-\[80px\] {
+  padding-right: 80px;
 }
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .font-body {
@@ -900,6 +958,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-gait-green-dark {
+  --tw-text-opacity: 1;
+  color: rgb(128 178 123 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -982,16 +1045,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-color: rgb(156 190 226 / var(--tw-bg-opacity));
   }
 
+  .dark\:bg-gait-software-dark {
+    background-image: url('/assets/gait-software-white.svg');
+  }
+
   .dark\:bg-gait-i-dark {
     background-image: url('/assets/gait-i-white.svg');
   }
 
   .dark\:bg-icons8-external-link-dark {
     background-image: url('/assets/icons8-external-link-dark.svg');
-  }
-
-  .dark\:bg-gait-software-dark {
-    background-image: url('/assets/gait-software-white.svg');
   }
 
   .dark\:bg-twitter-dark {
@@ -1002,6 +1065,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-image: url('/assets/github-dark.svg');
   }
 
+  .dark\:bg-gauge-dark {
+    background-image: url('/assets/gauge.svg');
+  }
+
+  .dark\:bg-user-dark {
+    background-image: url('/assets/user.svg');
+  }
+
   .dark\:pt-\[23px\] {
     padding-top: 23px;
   }
@@ -1009,6 +1080,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-gait-blue {
+    --tw-text-opacity: 1;
+    color: rgb(156 190 226 / var(--tw-text-opacity));
   }
 }
 
@@ -1031,12 +1107,36 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 1rem;
   }
 
+  .md\:ml-\[-30px\] {
+    margin-left: -30px;
+  }
+
+  .md\:mr-\[-30px\] {
+    margin-right: -30px;
+  }
+
+  .md\:mr-\[25\%\] {
+    margin-right: 25%;
+  }
+
+  .md\:ml-\[25\%\] {
+    margin-left: 25%;
+  }
+
   .md\:flex {
     display: flex;
   }
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-\[50px\] {
+    height: 50px;
+  }
+
+  .md\:w-\[50px\] {
+    width: 50px;
   }
 
   .md\:flex-\[50\%\] {
@@ -1055,12 +1155,25 @@ Ensure the default browser behavior of the `hidden` attribute.
     border-bottom-width: 0px;
   }
 
+  .md\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
   .md\:bg-gait-software-light {
     background-image: url('/assets/gait-software-black.svg');
   }
 
   .md\:bg-center {
     background-position: center;
+  }
+
+  .md\:pl-\[80px\] {
+    padding-left: 80px;
+  }
+
+  .md\:pr-\[80px\] {
+    padding-right: 80px;
   }
 
   .md\:text-left {

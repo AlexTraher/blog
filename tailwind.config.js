@@ -14,8 +14,11 @@ module.exports = {
         "gait-i-dark": "url('/assets/gait-i-white.svg')",
         "gait-software-dark": "url('/assets/gait-software-white.svg')",
         "icons8-external-link": "url('/assets/icons8-external-link.svg')",
-        "icons8-external-link-dark": "url('/assets/icons8-external-link-dark.svg')"
-        
+        "icons8-external-link-dark": "url('/assets/icons8-external-link-dark.svg')",
+        "gauge-light": "url('/assets/gauge.svg')",
+        "gauge-dark": "url('/assets/gauge.svg')",
+        "user-light": "url('/assets/user.svg')",
+        "user-dark": "url('/assets/user.svg')",
       },
       colors: {
         gait: {
