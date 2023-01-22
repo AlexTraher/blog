@@ -8,7 +8,7 @@ const END_WIDTH_PX = 151;
 const END_HEIGHT_PX = 45;
 
 // To help reduce flicker on first load
-const INITIAL_INTERSECTION = 0.14595851639233237 as const;
+const INITIAL_INTERSECTION = 0 as const;
 
 const getThresholds = (stepCount: number) => {
   const step = 1 / stepCount;
@@ -55,7 +55,7 @@ const useScrollSize: useScrollSize = () => {
       const options = {
         root: null,
         rootMargin: "0px",
-        threshold: getThresholds(1000),
+        threshold: getThresholds(5000),
       }
 
       observer = new IntersectionObserver(handler, options);
@@ -107,7 +107,7 @@ const ShrinkableLogo = () => {
           style={getStyle(multiplier)}
           className="bg-gait-software-light dark:bg-gait-software-dark bg-contain bg-no-repeat flex-shrink-0 max-w-[800px]"></div>
       </section>
-      <div className="h-[20vh] w-[1px] absolute top-[-10px] opacity-0" ref={ref} aria-hidden="true"></div>
+      <div className="h-[20vh] w-[1px] top-0 absolute opacity-0" ref={ref} aria-hidden="true"></div>
     </>
   )
 }
