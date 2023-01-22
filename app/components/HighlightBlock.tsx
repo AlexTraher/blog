@@ -10,7 +10,7 @@ const HighlightBlock: FC<PropsWithChildren<Props>> = ({ header, children, classN
     // TODO dark theme
     <section className={`bg-white dark:bg-gait-blue-mid rounded p-4 ${className}`}>
       {header ? <h3 className="
-        text-center text-xl
+        text-center text-lg sm:text-xl
         font-header font-light 
         py-4 px-8 mx-[-20px]
         underline-offset-8 underline decoration-gait-paper">

@@ -19,7 +19,7 @@ const Section: TSection = ({ header, children, headerPosition = 'left' }) => {
     <section className="flex flex-col w-[100%]">
       {header ? <h2 className={`
         bg-gait-green-light dark:bg-gait-blue 
-        text-center text-2xl ${headerPosition === 'left' ? 'md:text-left' : 'md:text-right'}
+        text-center text-lg sm:text-2xl ${headerPosition === 'left' ? 'md:text-left' : 'md:text-right'}
         font-header font-light 
         py-4 px-8 mx-[-20px]
         sticky top-[80px]
