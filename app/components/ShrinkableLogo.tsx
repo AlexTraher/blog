@@ -21,7 +21,6 @@ function easeInOutCubic(t: number, b: number, c: number, d: number) {
   return c * (t /= d) * t * t + b;
 }
 
-
 const useScrollSize: useScrollSize = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [multiplier, setMultiplier] = useState<number>(INITIAL_INTERSECTION);
