@@ -1,3 +1,4 @@
+import { MetaFunction } from "@remix-run/node";
 import HighlightBlock from "~/components/HighlightBlock";
 import Section from "~/components/Section";
 
@@ -32,7 +33,7 @@ export default function Services() {
         </Section.Column>
         <Section.Column className="flex-[100%]">
           <HighlightBlock header="Pricing">
-            <p className="text-lg my-4">From: £_</p>
+            <p className="text-lg my-4">From: £50 per hour</p>
             <p className="my-4">
               Pricing is based mainly on the size (desired) website - how many pages it includes, and the length of those pages.
             </p>
@@ -56,7 +57,7 @@ export default function Services() {
           </p>
         </Section.Column>
         <Section.Column className="flex-[100%] md:flex-[50%]">
-          <ul className="list-disc list-inside text-lg">
+          <ul className="list-disc list-inside">
           
             <li>Assessment and QA (Quality Assurance) of current website.</li>
             <li>Check for:
@@ -80,7 +81,7 @@ export default function Services() {
         </Section.Column>
         <Section.Column className="flex-[100%]">
           <HighlightBlock header="Pricing">
-            <p className="my-4">From: £100 per page with advisories</p>
+            <p className="my-4 text-lg">From: £100 per page with advisories</p>
             <p className="my-4">
               Pricing is based how how many pages we find with issues, and, to a lesser extent, how many issues we find. 
               We charge £100 per page that contains an advisory, and if we find over 10 on the same page, we charge another £5 per issue (from the 11th onwards). If we find no issues then there's no fee!
@@ -102,3 +103,7 @@ export default function Services() {
     </>
   );
 }
+
+export const meta: MetaFunction = () => {
+  return { title: "Gait Software | Services" };
+};

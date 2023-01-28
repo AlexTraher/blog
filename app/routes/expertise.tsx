@@ -1,3 +1,4 @@
+import { MetaFunction } from "@remix-run/node";
 import HighlightBlock from "~/components/HighlightBlock";
 import Section from "~/components/Section";
 
@@ -25,8 +26,8 @@ export default function About() {
           <img className="rounded-lg w-[300px]" src="./assets/alex.png" alt="headshot of Alex - our lead developer"></img>
           <p>Our Lead Developer Alex is who you'll be mainly liaising with if you chose to have a website refresh & rebuild.</p>
           <div className="flex justify-around w-[50%]">
-            <a href="https://twitter.com/alextraher"><div className="bg-twitter-light bg-no-repeat dark:bg-twitter-dark w-12 h-12 opacity-80 hover:opacity-100 bg-center"></div></a>
-            <a href="https://github.com/alextraher"><div className="bg-github-light bg-no-repeat dark:bg-github-dark w-12 h-12 opacity-80 hover:opacity-100 bg-center"></div></a>
+            <a href="https://twitter.com/alextraher" aria-label="link to Alex's twitter"><div className="bg-twitter-light bg-no-repeat dark:bg-twitter-dark w-12 h-12 opacity-80 hover:opacity-100 bg-center"></div></a>
+            <a href="https://github.com/alextraher" aria-label="link to Alex's github"><div className="bg-github-light bg-no-repeat dark:bg-github-dark w-12 h-12 opacity-80 hover:opacity-100 bg-center"></div></a>
           </div>
         </Section.Column>
       </Section>
@@ -52,3 +53,7 @@ export default function About() {
     </>
   );
 }
+
+export const meta: MetaFunction = () => {
+  return { title: "Gait Software | Expertise" };
+};

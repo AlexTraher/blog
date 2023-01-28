@@ -1,3 +1,4 @@
+import { MetaFunction } from "@remix-run/node";
 import HighlightBlock from "~/components/HighlightBlock";
 import Section from "~/components/Section";
 import ShrinkableLogo from "~/components/ShrinkableLogo";
@@ -82,3 +83,7 @@ export default function Index() {
     </>
     );
 }
+
+export const meta: MetaFunction = () => {
+  return { title: "Gait Software | Home" };
+};

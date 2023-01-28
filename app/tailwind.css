@@ -749,8 +749,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('/assets/gait-i-black.svg');
 }
 
-.bg-icons8-external-link {
-  background-image: url('/assets/icons8-external-link.svg');
+.bg-external-link-icon {
+  background-image: url('/assets/external-link-black.svg');
 }
 
 .bg-twitter-light {
@@ -839,9 +839,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 30px;
 }
 
-.text-xl {
-  font-size: 30px;
-  line-height: 50px;
+.text-lg {
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .text-sm {
@@ -852,9 +852,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 15px;
 }
 
-.text-lg {
-  font-size: 20px;
-  line-height: 30px;
+.text-xl {
+  font-size: 30px;
+  line-height: 50px;
 }
 
 .font-light {
@@ -967,8 +967,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-image: url('/assets/gait-i-white.svg');
   }
 
-  .dark\:bg-icons8-external-link-dark {
-    background-image: url('/assets/icons8-external-link-dark.svg');
+  .dark\:bg-external-link-icon-dark {
+    background-image: url('/assets/external-link-white.svg');
   }
 
   .dark\:bg-twitter-dark {
@@ -1003,14 +1003,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
-  .sm\:text-2xl {
-    font-size: 40px;
-    line-height: 60px;
-  }
-
   .sm\:text-xl {
     font-size: 30px;
     line-height: 50px;
+  }
+
+  .sm\:text-2xl {
+    font-size: 40px;
+    line-height: 60px;
   }
 
   .first\:sm\:border-b-0:first-child {
