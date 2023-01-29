@@ -1,9 +1,14 @@
 :root {
-  --gait-text-blue: #93C5FB;
-  --gait-blue-dark: #020120;
-  --gait-green-light: #DCE5DD;
-  --gait-green-dark: #80B27B;
-  --gait-paper: #EBEFEC;
+  --gait-blue: #9CBEE2, // dark theme
+  --gait-green: #314E2D, // light theme
+  --gait-blue-deep: #3F4466, // dark theme
+  --gait-green-deep: #314E2D, // light theme
+  --gait-blue-shallow: #525885, // dark theme
+  --gait-green-shallow: #DCE5DD, // light theme
+  --gait-paper-dark: #282B41, // dark theme
+  --gait-paper: #EBEFEC, // light theme
+  --gait-off-black: #262526, // dark theme
+  --gait-off-white: #FEFCF6, // light theme
 }
 
 /* @media */

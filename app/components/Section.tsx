@@ -1,30 +1,29 @@
 import { FC, PropsWithChildren } from "react";
 
-
-
 interface Props {
   header?: string
   headerPosition?: 'left' | 'right',
   columns?: number
+  headerId?: string
 }
 
 type TSection = FC<PropsWithChildren<Props>> & {
   Column: typeof SectionColumn;
 }
 
-
-
-const Section: TSection = ({ header, children, headerPosition = 'left' }) => {
+const Section: TSection = ({ header, children, headerId, headerPosition = 'left' }) => {
   return (
     <section className="flex flex-col w-[100%]">
-      {header ? <h2 className={`
-        bg-gait-green-light dark:bg-gait-blue 
-        text-center text-lg sm:text-2xl ${headerPosition === 'left' ? 'md:text-left' : 'md:text-right'}
-        font-header font-light 
-        py-4 px-8 mx-[-20px]
-        sticky top-[80px]
-        underline-offset-8 underline decoration-white decoration-2
-        z-10`
+      {header ? <h2 
+        id={headerId}
+        className={`
+          bg-gait-green-shallow dark:bg-gait-blue-shallow 
+          text-center text-lg sm:text-2xl ${headerPosition === 'left' ? 'md:text-left' : 'md:text-right'}
+          font-header font-light 
+          py-4 px-8 mx-[-1rem] md:mx-[-2rem] md:px-16
+          sticky top-[80px]
+          underline-offset-8 underline decoration-white decoration-2
+          z-10`
       }>
         &nbsp;&nbsp;&nbsp;{header}&nbsp;&nbsp;&nbsp;
       </h2> : null}
@@ -44,7 +43,7 @@ const SectionColumn: FC<PropsWithChildren<SectionColumnProps>> = ({ children, cl
     <div 
       className={`
         first:border-b-white first:border-b-2 border-b-0 md:first:border-b-0 md:first:border-r-white md:first:border-r-2
-        px-4 py-2 my-2
+        px-2 sm:px-8 py-2 my-2
         flex
         flex-col
         justify-center

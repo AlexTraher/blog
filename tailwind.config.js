@@ -19,17 +19,22 @@ module.exports = {
         "gauge-dark": "url('/assets/gauge-white.svg')",
         "user-light": "url('/assets/user.svg')",
         "user-dark": "url('/assets/user-white.svg')",
+        "mail-icon": "url('/assets/mail-black.svg')",
+        "mail-icon-dark": "url('/assets/mail-white.svg')",
       },
       colors: {
         gait: {
            // if you change these, be sure to change it in custom.css too
-          blue: "#9CBEE2",
-          "blue-dark": "#020120",
-          "blue-mid": "#525885",
-          "green-light": "#DCE5DD",
-          "green-dark": "#80B27B",
-          "paper": "#EBEFEC"
-
+          blue: "#9CBEE2", // dark theme
+          green: "#314E2D", // light theme
+          "blue-deep": "#3F4466", // dark theme
+          "green-deep": "#314E2D", // light theme
+          "blue-shallow": "#525885", // dark theme
+          "green-shallow": "#DCE5DD", // light theme
+          "paper-dark": "#282B41", // dark theme
+          "paper": "#EBEFEC", // light theme
+          "off-black": "#262526", // dark theme
+          "off-white": "#FEFCF6", // light theme
         }
       },
     },
@@ -41,8 +46,8 @@ module.exports = {
     },
     fontSize: {
       sm: '0.8rem',
-      base: ['14px', '30px'],
-      lg: ['20px', '30px'],
+      base: ['15px', '40px'],
+      lg: ['20px', '40px'],
       xl: ['30px', '50px'],
       '2xl': ['40px', '60px'],
       '3xl': '1.953rem',

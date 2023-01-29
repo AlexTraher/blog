@@ -12,7 +12,8 @@ const Navbar: FC<NavbarProps> = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="
-      sticky top-0 flex-shrink-0 flex-grow-0 py-4 dark:bg-gait-blue-dark bg-gait-paper z-10 flex px-6 flex-col md:flex-row min-h-[80px] z-20
+      sticky top-0 flex-shrink-0 flex-grow-0 py-4 dark:bg-gait-blue-dark bg-gait-paper dark:bg-gait-paper-dark z-10 flex px-6 flex-col md:flex-row min-h-[80px] z-20
+      
     ">
       <div className="self-center flex justify-between md:justify-start w-[100%]">
         <NavLink to="/" className="md:underline-offset-8 md:hover:underline" aria-label="link to homepage">
@@ -22,21 +23,23 @@ const Navbar: FC<NavbarProps> = () => {
             md:ml-[-2px]
             bg-contain
             bg-no-repeat
+            bg-[center_top_10px]
             md:bg-center
             ${isHome(pathname) ? 
               `motion-safe:md:bg-none
               motion-reduce:md:bg-gait-software-light
               motion-reduce:md:dark:bg-gait-software-dark
-              bg-gait-i-light dark:bg-gait-i-dark
+              bg-gait-light dark:bg-gait-dark
               `
               :
               `md:bg-gait-software-light md:dark:bg-gait-software-dark
-              bg-gait-i-light dark:bg-gait-i-dark`
+              bg-gait-light dark:bg-gait-dark
+             `
             }
           `}></div>
         </NavLink>
         <input id="menuToggle" type="checkbox" className="block opacity-0 md:hidden" onChange={({ target }) => setMenuOpen(target.checked)} checked={menuOpen}/>
-        <label htmlFor="menuToggle" className="block cursor-pointer self-center md:hidden justify-self-end"></label>
+        <label htmlFor="menuToggle" aria-label="navigation menu toggle" className="block cursor-pointer self-center md:hidden justify-self-end"></label>
       </div>
       <ul aria-label="navigation links" className={`md:mt-4 collapsible-menu flex-col md:flex-row md:flex flex-shrink-1 flex-grow-1 flex-[100%] justify-end ${menuOpen ?'collapsible-menu-open' : ''}`}>
         <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
@@ -54,7 +57,10 @@ const Navbar: FC<NavbarProps> = () => {
             <span className="ml-2 bg-external-link-icon dark:bg-external-link-icon-dark w-[15px] h-[15px] inline-block bg-contain bg-no-repeat content-['']"></span></a>
         </li>
         <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
-         <a href="mailto:hello@gait.dev" className="md:underline-offset-8 md:hover:underline block w-[100%] text-[15px]">hello@gait.dev</a>
+         <a href="mailto:hello@gait.dev" className="md:underline-offset-8 md:hover:underline block w-[100%] text-[15px]">
+          hello@gait.dev
+          <span className="ml-2 bg-mail-icon dark:bg-mail-icon-dark w-[15px] h-[15px] inline-block bg-contain bg-no-repeat content-[''] bg-[center_top_1px]"></span>
+          </a>
         </li>
       </ul>
       

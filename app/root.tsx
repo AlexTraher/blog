@@ -26,9 +26,9 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-gait-paper dark:bg-gait-blue-dark text-black dark:text-white font-body sub-pixel-antialiased text-base flex-col h-full">
+      <body className="bg-gait-paper dark:bg-gait-paper-dark text-black dark:text-white font-body sub-pixel-antialiased text-base flex-col h-full">
         <Navbar />
-          <main className="p-4">
+          <main className="px-4 sm:py-4 md:px-8">
             <div className="w-2 h-[20px]"></div>
             <Outlet />
           </main>
