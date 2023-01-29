@@ -1,17 +1,26 @@
 :root {
-  --gait-text-blue: #93C5FB;
+  --gait-blue: #9CBEE2, // dark theme
+  --gait-green: #314E2D, // light theme
+  --gait-blue-deep: #3F4466, // dark theme
+  --gait-green-deep: #314E2D, // light theme
+  --gait-blue-shallow: #525885, // dark theme
+  --gait-green-shallow: #DCE5DD, // light theme
+  --gait-paper-dark: #282B41, // dark theme
+  --gait-paper: #EBEFEC, // light theme
+  --gait-off-black: #262526, // dark theme
+  --gait-off-white: #FEFCF6, // light theme
 }
 
 /* @media */
-@media (max-width: 639px) {
+@media (max-width: 769px) {
   .collapsible-menu {
     max-height: 0;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
   }
   
-  #menuToggle:checked ~ .collapsible-menu {
-    max-height: 100px;
+  .collapsible-menu-open {
+    max-height: 250px;
   }
   
   
@@ -46,7 +55,7 @@
 @media (prefers-color-scheme: dark) {
   #menuToggle + label::before,
   #menuToggle + label::after {
-    background-color: var(--gait-text-blue);
+    background-color: white;
   }
 }
 

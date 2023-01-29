@@ -3,7 +3,7 @@ import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@re
 import styles from "./tailwind.css";
 import customStyles from "./custom.css";
 import Navbar from "./components/Navbar";
-import ShrinkableLogo from "./components/ShrinkableLogo";
+import Footer from "./components/Footer";
 
 export function links() {
   return [
@@ -13,7 +13,7 @@ export function links() {
 }
 
 export const meta: MetaFunction = () => {
-  return { title: "gait.dev" };
+  return { title: "Gait Software" };
 };
 
 export default function App() {
@@ -22,17 +22,21 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="description" content="Gait software consulting - for modern, accessible web solutions for your organisation"/>
         <Meta />
         <Links />
       </head>
-      <body className="bg-slate-100 dark:bg-black text-black dark:text-gait-blue">
+      <body className="bg-gait-paper dark:bg-gait-paper-dark text-black dark:text-white font-body sub-pixel-antialiased text-base flex-col h-full">
         <Navbar />
-        <main className="p-4">
-          <Outlet />
-        </main>
-        <ScrollRestoration />
-        <Scripts />
-        {process.env.NODE_ENV === "development" && <LiveReload />}
+          <main className="px-4 sm:py-4 md:px-8">
+            <div className="w-2 h-[20px]"></div>
+            <Outlet />
+          </main>
+          <Footer />
+          
+          <ScrollRestoration />
+          <Scripts />
+          {process.env.NODE_ENV === "development" && <LiveReload />}
       </body>
     </html>
   );

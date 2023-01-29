@@ -1,6 +1,8 @@
-import { hydrate } from "react-dom";
+import { hydrateRoot } from "react-dom/client";
 import { RemixBrowser } from "@remix-run/react";
 import reportWebVitals from './utils/web-vitals';
-hydrate(<RemixBrowser />, document);
+
+
+hydrateRoot(document, <RemixBrowser />);
 
 reportWebVitals();

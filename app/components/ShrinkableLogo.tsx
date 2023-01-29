@@ -7,6 +7,9 @@ const RATIO = 3.34 as const;
 const END_WIDTH_PX = 151;
 const END_HEIGHT_PX = 45;
 
+// To help reduce flicker on first load
+const INITIAL_INTERSECTION = 0 as const;
+
 const getThresholds = (stepCount: number) => {
   const step = 1 / stepCount;
   let i = 0 - step;
@@ -18,10 +21,9 @@ function easeInOutCubic(t: number, b: number, c: number, d: number) {
   return c * (t /= d) * t * t + b;
 }
 
-
 const useScrollSize: useScrollSize = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [multiplier, setMultiplier] = useState(0);
+  const [multiplier, setMultiplier] = useState<number>(INITIAL_INTERSECTION);
   const [prefersReduceMotion, setPrefersReduceMotion] = useState(() => {
     if (typeof window !== 'undefined') {
       return window?.matchMedia("(prefers-reduced-motion: reduce)")?.matches
@@ -52,7 +54,7 @@ const useScrollSize: useScrollSize = () => {
       const options = {
         root: null,
         rootMargin: "0px",
-        threshold: getThresholds(1000),
+        threshold: getThresholds(5000),
       }
 
       observer = new IntersectionObserver(handler, options);
@@ -80,7 +82,13 @@ const getStyle = (multiplier: number) => {
     "--diff": "calc(var(--startWidth) - var(--endWidth))",
     "--minus": "calc(var(--diff) * var(--multiplier))",
     "--width": `calc(var(--startWidth) - var(--minus))`,
+    "--startMargin": "calc(((100vw - min(var(--startWidth), 800px)) / 2) - 40px)",
+    "--endMargin": "-16px",
+    "--diffMargin": "calc(var(--startMargin) - var(--endMargin))",
+    "--minusMargin": "calc(var(--diffMargin) * var(--multiplier))",
+    "--margin": "calc(var(--startMargin) - var(--minusMargin))",
     width: "var(--width)",
+    marginLeft: "var(--margin)",
     maxWidth: "800px",
     height: `calc(var(--width) / ${RATIO})`,
     maxHeight: `${800 / RATIO}px`,
@@ -91,15 +99,14 @@ const getStyle = (multiplier: number) => {
 
 const ShrinkableLogo = () => {
   const [multiplier, ref] = useScrollSize();
-
   return (
     <>
-      <section className="justify-center motion-safe:sticky top-0 z-20 p-4 w-[200px] overflow-visible m-auto hidden md:flex">
+      <section className="justify-start motion-safe:sticky top-0 z-20 p-4 w-[200px] overflow-visible hidden md:flex ml-[-10px] pt-[22px] dark:pt-[23px]">
         <div
           style={getStyle(multiplier)}
-          className="bg-gait-software-light dark:bg-gait-software-dark bg-contain bg-no-repeat flex-shrink-0"></div>
+          className="bg-gait-software-light dark:bg-gait-software-dark bg-contain bg-no-repeat flex-shrink-0 max-w-[800px]"></div>
       </section>
-      <div className="h-[20vh] w-[1px] absolute top-[-10px] opacity-0" ref={ref} aria-hidden="true"></div>
+      <div className="h-[20vh] w-[1px] top-0 absolute opacity-0" ref={ref} aria-hidden="true"></div>
     </>
   )
 }
