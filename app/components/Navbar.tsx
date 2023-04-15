@@ -43,13 +43,16 @@ const Navbar: FC<NavbarProps> = () => {
       </div>
       <ul aria-label="navigation links" className={`md:mt-4 collapsible-menu flex-col md:flex-row md:flex flex-shrink-1 flex-grow-1 flex-[100%] justify-end ${menuOpen ?'collapsible-menu-open' : ''}`}>
         <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
-        <NavLink to="/" className={activeUnderline("md:underline-offset-8 md:hover:underline uppercase block w-[100%]")} onClick={() => setMenuOpen(false)}>Home</NavLink>
+          <NavLink to="/" className={activeUnderline("md:underline-offset-8 md:hover:underline uppercase block w-[100%]")} onClick={() => setMenuOpen(false)}>Home</NavLink>
         </li>
         <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
-        <NavLink to="/services" className={activeUnderline("md:underline-offset-8 md:hover:underline uppercase block w-[100%]")} onClick={() => setMenuOpen(false)}>Services</NavLink>
+          <NavLink to="/services" className={activeUnderline("md:underline-offset-8 md:hover:underline uppercase block w-[100%]")} onClick={() => setMenuOpen(false)}>Services</NavLink>
         </li>
         <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
           <NavLink to="/expertise" className={activeUnderline("md:underline-offset-8 md:hover:underline uppercase block w-[100%]")} onClick={() => setMenuOpen(false)}>Expertise</NavLink>
+        </li>
+        <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
+          <NavLink to="/talks" className={activeUnderline("md:underline-offset-8 md:hover:underline uppercase block w-[100%]")} onClick={() => setMenuOpen(false)}>Talks</NavLink>
         </li>
         <li className="flex-shrink-0 flex-grow-0 min-w-[120px] text-center text-sm">
           <a href="https://blog.gait.dev" className={"md:underline-offset-8 md:hover:underline uppercase block w-[100%]"} target="_blank">
