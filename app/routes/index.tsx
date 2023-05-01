@@ -1,5 +1,7 @@
 import { MetaFunction } from "@remix-run/node";
+import { useNavigate } from "react-router-dom";
 import Border from "~/components/BorderContent";
+import Button from "~/components/Button";
 import HighlightBlock from "~/components/HighlightBlock";
 import HightlightLink from "~/components/HighlightLink";
 import Paragraph from "~/components/Paragraph";
@@ -7,34 +9,50 @@ import Section from "~/components/Section";
 import ShrinkableLogo from "~/components/ShrinkableLogo";
 
 export default function Index() {
+  const navigate = useNavigate();
+
   return (
     <>
-        <ShrinkableLogo />
-        <h2 className="my-4 text-center text-xl text-gait-green-deep dark:text-gait-blue sm:pb-16 sm:pt-16">
-          For a faster, more user-focused experience
+      <ShrinkableLogo />
+      <section className="flex justify-center gap-8 my-16 flex-col sm:flex-row px-4">
+        <Button
+          className="min-h-[60px]"
+          onClick={() => navigate("/services")}
+          icon={() => <span className="block w-[25px] h-[25px] bg-contain bg-no-repeat bg-gauge-light dark:bg-gauge-dark bg-center"></span>}>
+            Technical Expertise
+        </Button>
+        <Button
+          className="min-h-[60px]"
+          onClick={() => navigate("/services#AuditAndReview")}
+          icon={() => <span className="block w-[25px] h-[25px] bg-contain bg-no-repeat bg-user-light dark:bg-user-dark bg-center"></span>}>
+            QA & User Experience
+        </Button>
+      </section>
+      <section className="flex bg-gait-green-shallow dark:bg-gait-blue-shallow mt-[100px] mx-[-2rem] justify-center items-center">
+        <h2 className="text-xl text-gait-green-deep dark:text-gait-blue bg-gait-paper dark:bg-gait-paper-dark py-4 px-4 sm:px-8 md:px-16">
+          Striving for a better web
         </h2>
-      <section className="flex px-4 my-8 justify-center gap-2 md:mr-[25%]">
-        <div className=" p-2 md:ml-[-3rem] md:pl-[80px] md:min-w-[227px] md:bg-gait-off-white md:dark:bg-gait-off-black flex items-center justify-end">
-          <span className="block w-[100px] h-[100px] md:w-[50px] md:h-[50px]  bg-contain bg-no-repeat bg-gauge-light dark:bg-gauge-dark"></span>
-        </div>
-        <Paragraph>
-          We take slow websites, and turn them into new, fast, responsive sites that are set up for the future. 
-          If you would like this for your website, then our <HightlightLink href="/services">'Refresh & Rebuild'</HightlightLink> package is for you.
-        </Paragraph>
       </section>
-      
-      <section className="flex px-4 my-8 gap-2 md:ml-[25%]">
-        <Paragraph align="right">
-          We'll also assess current websites, reviewing them for any and all user-experience issues. 
-          If you would like such a review for your business's website, then ask us about our <HightlightLink href="/services#AuditAndReview">'Audit & Review'</HightlightLink> package. 
-          And the best part - if we don't find anything of concern, then there's no fee!
-        </Paragraph>
-        <div className=" p-2 md:mr-[-3rem] md:pr-[80px] md:min-w-[227px]  md:bg-gait-off-white md:dark:bg-gait-off-black flex items-center justify-start">
-          <span className="block w-[100px] h-[100px] md:w-[50px] md:h-[50px] bg-contain bg-no-repeat bg-user-light dark:bg-user-dark"></span>
-        </div>
-      </section>
+      <div className="flex flex-col items-center my-16">
+        <section className="flex px-4 my-8 justify-center gap-2 bg-gait-off-white dark:bg-gait-off-black items-center border-r-8 border-gait-green-shallow dark:border-gait-blue-shallow md:ml-16 lg:ml-32 max-w-[1200px]">
+          <span className="hidden md:block w-[75px] h-[75px] bg-contain bg-no-repeat bg-gauge-light dark:bg-gauge-dark bg-center"></span>
+          <Paragraph>
+            We take slow websites, and turn them into new, fast, responsive sites that are set up for the future. 
+            If you would like this for your website, then our <HightlightLink href="/services">'Refresh & Rebuild'</HightlightLink> package is for you.
+          </Paragraph>
+        </section>
+        
+        <section className="flex px-4 my-8 justify-center gap-2 bg-gait-off-white dark:bg-gait-off-black items-center border-l-8 border-gait-green-shallow dark:border-gait-blue-shallow md:mr-16 lg:mr-32 max-w-[1200px]">
+
+          <Paragraph>
+            We take slow websites, and turn them into new, fast, responsive sites that are set up for the future. 
+            If you would like this for your website, then our <HightlightLink href="/services">'Refresh & Rebuild'</HightlightLink> package is for you.
+          </Paragraph>
+          <span className="hidden md:block w-[75px] h-[75px] bg-contain bg-no-repeat bg-user-light dark:bg-user-dark bg-center"></span>
+        </section>
+      </div>
     
-      <Section>
+      {/* <Section>
         <Section.Column className="flex-[100%] md:flex-[50%]">
           <HighlightBlock header="Refresh & Rebuild" className="h-full flex flex-col justify-around" align="center">
             <Paragraph>
@@ -81,12 +99,15 @@ export default function Index() {
           </HighlightBlock>
 
         </Section.Column>
-      </Section>
-      <section className="h-64 flex flex-col justify-center">
+      </Section> */}
+
+      <section className="h-64 flex flex-col justify-center gap-10 items-center my-16">
+        <div className="bg-gait-i-light dark:bg-gait-i-dark w-[50px] h-[75px] bg-contain bg-no-repeat bg-center flex-none"></div>
         <Paragraph align="center" textSize="lg">
           Unsure which would be best for your site's needs?<br/>
           Just <HightlightLink href="mailto:hello@gait.dev">reach out to us</HightlightLink> for a complimentary assessment and recommendation
         </Paragraph>
+        <div className="hidden md:block bg-gait-i-light dark:bg-gait-i-dark w-[50px] h-[75px] bg-contain bg-no-repeat bg-center flex-none"></div>
       </section>
     </>
     );

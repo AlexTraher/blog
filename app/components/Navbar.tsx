@@ -29,7 +29,8 @@ const Navbar: FC<NavbarProps> = () => {
               `motion-safe:md:bg-none
               motion-reduce:md:bg-gait-software-light
               motion-reduce:md:dark:bg-gait-software-dark
-              bg-gait-light dark:bg-gait-dark
+              bg-gait-i-light dark:bg-gait-i-dark
+              bg-[left_0px]
               `
               :
               `md:bg-gait-software-light md:dark:bg-gait-software-dark

@@ -44,7 +44,7 @@ const Talk: FC<ITalk> = ({ title, Slides, talkLink, description }) => (
         <Section.Column className="flex-1" border={false}>
           <p>{description}</p>
         </Section.Column>
-        <Section.Column className="justify-center flex-1">
+        <Section.Column className="items-center flex-1">
           {Slides}
         </Section.Column>
       </Section>
@@ -60,18 +60,18 @@ export const meta: MetaFunction = () => {
 const TALKS: ITalk[] = [
   {
     title: "Lessons Learned from Enterprise Micro-Frontends",
-    Slides: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTK2hTqTcr4JkFjBZ4fa3v1m73vO0ZFL1BLgCIc_BEmvHc3nwSjc1YSkheuIoDpug/embed?start=false&loop=false&delayms=60000"  height={300} allowFullScreen={true}></iframe>,
+    Slides: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTK2hTqTcr4JkFjBZ4fa3v1m73vO0ZFL1BLgCIc_BEmvHc3nwSjc1YSkheuIoDpug/embed?start=false&loop=false&delayms=60000" allowFullScreen={true}></iframe>,
     talkLink: "https://youtu.be/8033GWqjiB0?t=6093",
     description: "Alex talks about the lessons learned from trying to implement micro-frontends in the enterprise and recommends an approach for a step by step migration plan."
   },
   {
     title: "I'm Not a Proper Developer Because...",
-    Slides: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSWgBR6jkHIN_yqpqEKb0H6r_lhI2DTmoTRe-iVvx9kLLB71JTEcyopoF6dmx_YEQLOHO4vM-mxWTpt/embed?start=false&loop=false&delayms=3000" height={300} allowFullScreen={true}></iframe>,
+    Slides: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSWgBR6jkHIN_yqpqEKb0H6r_lhI2DTmoTRe-iVvx9kLLB71JTEcyopoF6dmx_YEQLOHO4vM-mxWTpt/embed?start=false&loop=false&delayms=3000" allowFullScreen={true}></iframe>,
     description: "Alex talks about impostor syndrome, how he has struggled with it and how we can lean on other research in psycology to help us better tackle feeling like an impostor."
   },
   {
     title: "Assembling The Enterprise With Micro-Frontends",
-    Slides: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSf0T06efzR8jOLPiGz7Tyah2ZGrPNTjdjgC4Oc3OCXiNcRE1JvbSFTa6ZBPBWTag/embed?start=false&loop=false&delayms=60000" allowFullScreen={true} height={300}></iframe>,
+    Slides: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSf0T06efzR8jOLPiGz7Tyah2ZGrPNTjdjgC4Oc3OCXiNcRE1JvbSFTa6ZBPBWTag/embed?start=false&loop=false&delayms=60000" allowFullScreen={true} className="min-w-[150px]"></iframe>,
     talkLink: "",
     description: "Alex talks about how IG have supported independent teams by introducing micro-frontends into their web platform."
   },

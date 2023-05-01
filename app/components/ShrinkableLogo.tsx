@@ -107,6 +107,12 @@ const ShrinkableLogo = () => {
           className="bg-gait-software-light dark:bg-gait-software-dark bg-contain bg-no-repeat flex-shrink-0 max-w-[800px]"></div>
       </section>
       <div className="h-[20vh] w-[1px] top-0 absolute opacity-0" ref={ref} aria-hidden="true"></div>
+      {/* Additional Section for smaller screens */}
+      <section className="justify-center p-4 w-full overflow-visible flex md:hidden px-8">
+        <div
+          className="bg-gait-software-light dark:bg-gait-software-dark bg-center bg-contain bg-no-repeat flex-shrink-0 max-w-[800px] w-full h-[150px]"></div>
+      </section>
+      
     </>
   )
 }

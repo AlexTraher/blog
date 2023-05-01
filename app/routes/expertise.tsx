@@ -17,7 +17,7 @@ export default function Expertise() {
           <HighlightBlock>
             <Paragraph>
               If Alex sounds like he has the skillset you're looking for to drive your project forward, 
-              or help get a piece of work done to a high standard, then <HightlightLink href="hello@gait.dev">send us an email</HightlightLink>!
+              or help get a piece of work done to a high standard, then <HightlightLink href="mailto:hello@gait.dev">send us an email</HightlightLink>!
             </Paragraph>
             <Paragraph>
               Alex also offers his skills as a consultant if you're looking to upskill your team!
@@ -45,7 +45,7 @@ export default function Expertise() {
             
           </Paragraph>
           <Paragraph>
-            Gemma is an expert at routing out issues and inconsistencies, and is constantly finding them though-out the internet!
+            Gemma is an expert at routing out issues and inconsistencies, and is constantly finding them through-out the internet!
             Her keen eye, along with her UX and web development background will ensure your business has a site that customers love using and have full confidence in.
           </Paragraph>
          
